@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Retangulo</title>
+
+    <script>
+        function Conta(){
+            var nome;
+            var banco;
+            var conta;
+            var saldo;
+            this.setNome=function(value){
+                nome = value;
+            };
+            this.setBanco=function(value){
+                banco = value;
+            };
+            this.setConta=function(value){
+                conta = value;
+            };
+            this.setSaldo=function(value){
+                saldo = value;
+            };
+        }
+        
+        function Corrente(){
+            var saldoEspecial;
+            this.setSaldoEspecial=function(value){
+                saldoEspecial = value;
+            };
+        }
+        
+        function Poupanca(){
+            var juros;
+            var dtVencimento;
+            this.setJuros=function(value){
+                juros = value;
+            };
+            this.setDtVencimento=function(value){
+                dtVencimento = value;
+            };
+        }
+        
+        Corrente.prototype = new Conta();
+        Poupanca.prototype = new Conta();
+        
+        var conta = new Conta();
+        conta.setNome("Marília");
+        conta.setBanco(001);
+        conta.setConta(22551);
+        conta.setSaldo(parseFloat(500));
+        
+        var corrente = new Corrente();
+        corrente.setNome("Margarete");
+        corrente.setBanco(341);
+        corrente.setConta(31540);
+        corrente.setSaldo(parseFloat(1020));
+        corrente.setSaldoEspecial(parseFloat(100));
+        
+        var poupanca = new Poupanca();
+        poupanca.setNome("Marília");
+        poupanca.setBanco(001);
+        poupanca.setConta(22551);
+        poupanca.setSaldo(parseFloat(500));
+        poupanca.setJuros(2);
+        poupanca.setDtVencimento("10/10/2020");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

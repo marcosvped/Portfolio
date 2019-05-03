@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste This</title>
+</head>
+
+<body>
+    <script>
+   function contrario(frase) {
+       var aocontrario="";
+       var aux=frase;
+       var letra;
+      // alert(frase.length-1);
+       for (i=frase.length; i>=0; i--){
+           letra=aux.substr(i,1);
+           alert(letra);
+           aocontrario=aocontrario+letra;
+       }
+       return aocontrario;
+   }
+        alert(contrario("fatec"));
+    </script>
+</body>
+
+</html>

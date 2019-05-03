@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste com Arrays</title>
+</head>
+
+<body>
+    <script>
+        var cores2 = ["vermelho", "azul", "verde"];
+        cores2.length = 3;
+        //incluiu
+        alert(cores2[0] + " " + cores2[1] + " " + cores2[2] + " " + cores2[3]); //undefined
+
+        var cores1 = ["vermelho", "azul", "verde"];
+        cores1.length = 2;
+        //excluiu
+        alert(cores1[2]); //undefined
+
+
+        function incrementaFinal(_array) {
+            var newArray = [];
+            newArray = _array.slice(0);
+           // extrai do início até o fim de array
+            var lastNumber = newArray.pop();
+            newArray.push(lastNumber + 1);
+            return newArray;
+        }
+        
+      var x= Array(6,4,3,2,1)
+      
+      alert(incrementaFinal(x));
+        
+    </script>
+</body>
+
+</html>

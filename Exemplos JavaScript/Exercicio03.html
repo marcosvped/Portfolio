@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Usando eventos no Javascript</title>
+</head>
+
+<body>
+	<img src="Open.png" onclick="mClick(this)" onmouseout="mMouseOut(this)" onmouseover="mMouseOver(this)"/>
+	<script>
+		function mClick(obj) {
+			obj.src="Broken.png";
+		}
+
+		function mMouseOver(obj) {
+			obj.src="Closed.png";
+		}
+
+		function mMouseOut(obj) {
+			obj.src="Open.png";
+        }
+	</script>
+</body>
+
+</html>

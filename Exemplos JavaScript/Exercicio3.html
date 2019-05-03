@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pedra, Papel ou Tesoura</title>
+
+    <script>
+        var p1;
+        var p2;
+        do{
+        p1 = prompt("Escolha pedra (1), papel (2) ou tesoura(3)");
+        }while(p1 > 3 || p1 < 1);
+        p2 = Math.random() + Math.random() + 1;
+        if(p1 == 1)
+        {
+            if(p2 <= 1)
+                alert("Empate!");
+            else if(p2 <= 2)
+                alert("Papel cobre a pedra! Computador vence!");
+            else
+                alert("Pedra quebra a tesoura! Jogador vence!");
+        }
+        else if(p1 == 2)
+        {
+            if(p2 <= 1)
+                alert("Tesoura corta papel! Computador vence!");
+            if(p2 <= 2)
+                alert("Empate!");
+            else
+                alert("Papel cobre a pedra! Jogador vence!");
+        }
+        else if(p1 == 3)
+        {
+            if(p2 <= 1)
+                alert("Pedra quebra a tesoura! Computador vence!");
+            if(p2 <= 2)
+                alert("Tesoura corta papel! Jogador vence!");
+            else
+                alert("Empate!");
+        }
+    </script>
+</head>
+
+
+<body>
+</body>
+
+</html>

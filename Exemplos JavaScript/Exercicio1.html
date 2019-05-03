@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Retangulo</title>
+
+    <script>        
+        
+        
+        function Retangulo(){
+            var base;
+            var altura;
+            
+            this.calcArea = function(){
+                return (base * altura);
+            };
+            
+            this.setBase=function(value){
+                base = value;
+            };
+            
+            this.setAltura=function(value){
+                altura = value;
+            };
+            
+            this.getBase=function(){
+                return base;
+            };
+            
+            this.getAltura=function(){
+                return altura;
+            };
+        }
+        
+        var x;
+        var y;
+        var a;
+        
+        x = prompt("Digite a base");
+        y = prompt("Digite a altura");
+        
+        var ret1 = new Retangulo();
+        ret1.setBase(parseFloat(x));
+        ret1.setAltura(parseFloat(y));
+        a = ret1.calcArea();
+        
+        alert("Base = " + ret1.getBase());
+        alert("Altura = " + ret1.getAltura());
+        alert("Área = " + a);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
